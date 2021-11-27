@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Sistema de Inventario | Drogueria</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/"><i></i> Inicio</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLogged">
+          <a class="nav-link"  routerLink="/login"><i ></i> Iniciar Sesión</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" (click)="ManejoUsuario()"><i class="fas fa-home"></i> Manejo de usuarios</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" type="button" (click)="CerrarSesion()"><i></i> Cerrar Sesión</a>
+        </li>
+        
+        
+    </ul>
+  </div>
+</nav>

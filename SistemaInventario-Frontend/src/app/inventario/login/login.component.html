@@ -1,0 +1,21 @@
+<div class="main-bg">
+  <app-menu></app-menu>
+  <div class="login-container text-c animated flipInX">
+              <h3 class="text-whitesmoke">Inicio de Sesión</h3>
+          <div class="container-content">
+              <form class="margin-t" #formLogin="ngForm" (ngSubmit)="ingresar(formLogin)">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Usuario" autocomplete="off" name="usuario" [(ngModel)]="persona.usuario" required>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Contraseña" name="contrasena" [(ngModel)]="persona.contrasena" required>
+                  </div>
+                  <br>
+                  <button type="submit" class="form-button button-l margin-b">Iniciar Sesión</button>
+
+                  <a class="text-darkyellow" (click)=Registro()><small>Registrar</small></a>
+              </form>
+          </div>
+      </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="content" role="main">
+  <app-menu></app-menu>
+  <div class = "registro-container text-c animated flipInX">
+    <h3 class="text-whitesmoke">Registro de Usuario</h3>
+    <div class ="container-content">
+       <form #formRegistro="ngForm" (ngSubmit)="registrar(formRegistro)">
+        <div class="form-group">
+          <input type="text" autocomplete="off" placeholder="Usuario" class="form-control" name="usuario" [(ngModel)]="persona.usuario" required>
+          <div class="divider"></div>
+          <input type="password" placeholder="Contraseña" class="form-control" name="contrasena" [(ngModel)]="persona.contrasena" required>
+          <div class="divider"></div>
+          <input type="text" autocomplete="off" placeholder="Nombre(s)" class="form-control" name="nombre" [(ngModel)]="persona.nombre" required>
+          <div class="divider"></div>
+          <input type="text" autocomplete="off" placeholder="Apellido(s)" class="form-control" name="apellido" [(ngModel)]="persona.apellido" required>
+          <div class="divider"></div>
+          <input type="text" autocomplete="off" placeholder="Correo Electrónico" class="form-control" name="correo" [(ngModel)]="persona.correo" required>
+          <div class="divider"></div>
+          <select name="Cargo" class="form-control" [(ngModel)]="persona.cargo" required>
+            <option value="0">Seleccionar Cargo</option>
+            <option value="Admin">Admin</option>
+            <option value="Empleado">Empleado</option>
+          </select>
+            <p></p>
+            <button class="form-button button-l margin-b" type="submit">Registrar</button>
+            <p></p>
+            <button class="form-button button-l margin-b" (click)="login()" >Iniciar sesión</button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<div class="content" role="main">
+  <app-menu></app-menu>
+  <div class = "registro-container text-c animated flipInX">
+    <h3 class="text-whitesmoke">Ingreso por compras</h3>
+    <div class ="container-content">
+      <form action="">
+        <div class="form-group">
+          <input type="text" placeholder="Nuevo del producto" class="form-control" name="nombre"  required [(ngModel)]="producto.nombre" (ngModelChange)="producto.nombre = $event.toUpperCase()">
+          <div class="divider"></div>
+          <input type="number" placeholder="Cantidad del producto" class="form-control" name="cantidad"  required [(ngModel)]="producto.stock" >
+          <div class="divider"></div>
+          <input type="number" placeholder="Precio compra" class="form-control" name="precioCompra" required [(ngModel)]="producto.precioCompra">
+          <div class="divider"></div>
+          <input type="number" placeholder="Precio venta" class="form-control" name="precioVenta" required [(ngModel)]="producto.precioVenta" >
+          <div class="divider"></div>
+          <button (click)="crear()" class="form-button button-l margin-b" ng-disabled="nombre.$dirty && nombre.$invalid">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

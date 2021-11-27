@@ -1,0 +1,45 @@
+<div class="content" role="main">
+  <app-menu></app-menu>
+  <div class = "registro-container text-c animated flipInX">
+      <h3 class="text-whitesmoke">Consulta de productos</h3>
+      <div class ="container-content">
+          <div class="form-group">
+              <select class="form-control" [(ngModel)]="elegido"  >
+                  <option value="0">Seleccionar Producto</option>
+                  <option [value]="producto.idProducto" *ngFor="let producto of productos">{{producto.nombre}}</option>
+              </select>
+                  <br> 
+                  <button (click)="buscar()" class="form-button button-l margin-b">Buscar</button>
+                  <br><br>
+                  
+               <div class ="table mitabla" >
+                
+                <table class="table table-striped table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PRODUCTO</th>
+                            <th scope="col">PRECIO VENTA</th>
+                            <th scope="col">PRECIO COMPRA</th>
+                            <th scope="col">CANTIDAD</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let producto1 of productos1" class="text-center" (click)=buscar()>
+                            <td>{{producto1.idProducto}}</td>
+                            <td>{{producto1.nombre}}</td>
+                            <td>{{producto1.precioVenta}}</td>
+                            <td>{{producto1.precioCompra}}</td>        
+                            <td>{{producto1.stock}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+
+     

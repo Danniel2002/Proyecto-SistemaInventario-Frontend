@@ -1,0 +1,14 @@
+<div class="content" role="main">
+  <app-menu></app-menu>
+  <div class = "registro-container text-c animated flipInX">
+      <h3 class="text-whitesmoke">Eliminar productos</h3>
+      <div class ="container-content">
+       <select class="form-control" [(ngModel)]="elegido"  >
+          <option value="0">Seleccionar Producto</option>
+          <option [value]="producto.idProducto" *ngFor="let producto of productos">{{producto.nombre}}</option>
+      </select>
+          <br> <br>  <br>
+          <button (click)="eliminar()" class="form-button button-l margin-b">Eliminar</button>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.navbar{
+    background-color: #212121;
+
+}
+.navbar-brand{
+    margin-left: 10px;
+    text-decoration:none;
+    color: #FFEB3B;
+}
+.nav-link{
+
+    text-decoration:none;
+    color: #FFEB3B;
+}
