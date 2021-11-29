@@ -28,7 +28,22 @@ export class MenuComponent implements OnInit {
   ManejoUsuario(){
     this.router.navigate(["manejo-usuario"])
   }
+  Reporte(){
+    this.router.navigate(["reporte"])
+  }
+  Compra(){
+    this.router.navigate(["compra"]);
+  }
+  Venta(){
+    this.router.navigate(["venta"]);
+  }
+  ConsultaP(){
+    this.router.navigate(["consulta-p"]);
+  }
 
+  EliminarP(){
+    this.router.navigate(["eliminar-p"]);
+  }
   onLogOut(): void {
     window.location.reload();
   }

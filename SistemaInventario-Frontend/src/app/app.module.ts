@@ -20,7 +20,8 @@ import { FormsModule } from '@angular/forms';
 import { ServiceService } from './Service/service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RecaptchaModule } from 'ng-recaptcha';
+
+
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
     CambioConComponent,
     ReporteComponent,
     MenuComponent,
-    IndexComponent
+    IndexComponent,
+
   ],
   imports: [
     BrowserModule, 
@@ -45,7 +47,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RecaptchaModule,
+   
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

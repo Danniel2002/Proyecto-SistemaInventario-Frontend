@@ -12,7 +12,22 @@
           <a class="nav-link"  routerLink="/login"><i ></i> Iniciar Sesión</a>
         </li>
         <li class="nav-item" *ngIf="isLogged">
-          <a class="nav-link" (click)="ManejoUsuario()"><i class="fas fa-home"></i> Manejo de usuarios</a>
+          <a class="nav-link" type="button" (click)="ManejoUsuario()"><i class="fas fa-home"></i> Manejo de usuarios</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" type="button" (click)="Compra()"><i class="fas fa-home"></i> Ingreso por compra</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" type="button" (click)="Venta()"><i class="fas fa-home"></i> Egreso por venta</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" type="button" (click)="ConsultaP()"><i class="fas fa-home"></i> Consulta de productos</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" type="button" (click)="EliminarP()"><i class="fas fa-home"></i> Eliminar producto</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" type="button" (click)="Reporte()"><i class="fas fa-home"></i> Reportes</a>
         </li>
         <li class="nav-item" *ngIf="isLogged">
           <a class="nav-link" type="button" (click)="CerrarSesion()"><i></i> Cerrar Sesión</a>
