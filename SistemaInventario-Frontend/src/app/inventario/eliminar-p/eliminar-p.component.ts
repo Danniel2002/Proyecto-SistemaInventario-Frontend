@@ -12,6 +12,7 @@ export class EliminarPComponent implements OnInit {
 
   productos:Producto[] = [];
   producto:Producto = new Producto();
+  producto1:Producto = new Producto();
   elegido: string  = '0';
   numero:number = 0;
 
@@ -26,23 +27,21 @@ export class EliminarPComponent implements OnInit {
 
   eliminar(){
     this.numero=Number(this.elegido);
-    
-  
-    if(this.numero==0  ){
-      alert("Seleccione los datos")
-      
-    }else{
-     
-      this.service.deleteProducto(this.numero).subscribe(data=>{
-        alert("Se elimino con éxito");
-        window.location.reload();
-      
-      })
-      
-
-     
+    this.service.getProducto(this.numero)
+    .subscribe(data => {
+      this.producto1=data;
+      if(this.numero==0  ){
+        alert("Seleccione los datos")
       }
-  
+      if(this.producto1.stock != 0){
+        alert("Error")
+      }else{
+        this.service.deleteProducto(this.numero).subscribe(data=>{
+          alert("Se elimino con éxito");
+          window.location.reload();
+        })
+      }
+    })
   }
 
 }
