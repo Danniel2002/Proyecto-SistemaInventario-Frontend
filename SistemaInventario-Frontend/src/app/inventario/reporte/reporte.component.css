@@ -27,7 +27,7 @@ h6 {
   }
 
   .registro-container {
-    max-width: 500px;
+    max-width: 700px;
     z-index: 100;
     margin: 0 auto;
     padding-top: 100px;
@@ -100,4 +100,14 @@ h6 {
   width:5px;
   height:auto;
   display:inline-block;
+}
+
+.button {
+  border-radius: 3px;
+}
+
+.form-button {
+  background-color: rgba(255, 235, 59, 0.24);
+  border-color: rgba(255, 235, 59, 0.24);
+  color: #e6e6e6;
 }

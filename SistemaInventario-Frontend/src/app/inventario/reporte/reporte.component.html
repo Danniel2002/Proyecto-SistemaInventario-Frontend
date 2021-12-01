@@ -1,7 +1,10 @@
 <div class="content" role="main">
     <app-menu></app-menu>
     <div class = "registro-container text-c animated flipInX">
-        <h3 class="text-whitesmoke">Reportes</h3>
+        <h1 class="text-whitesmoke">Reportes</h1>
+        <button (click)="generarPDF()" class="form-button button-l margin-b">Generar PDF</button>
+        <br>
+        <br>
         <div class ="container-content">
             <div class="form-group">
                
@@ -12,17 +15,18 @@
                           <thead>
                             <tr>
                               <th scope="col">ID</th>
+                              <th scope="col">FECHA</th>
                               <th scope="col">PRODUCTO</th>
                               <th scope="col">TIPO</th>
                               <th scope="col">CANTIDAD</th>
                               <th scope="col">PRECIO</th>
                               <th scope="col">TOTAL</th>
-                              
                             </tr>
                           </thead>
                           <tbody>
                             <tr *ngFor="let reporte of reportes" class="text-center" (click)=buscar()>
                               <td>{{reporte.idReporte}}</td>
+                              <td>{{reporte.fecha}}</td>
                               <td>{{reporte.nombre}}</td>
                               <td>{{reporte.tipo}}</td>
                               <td>{{reporte.cantidad}}</td>
@@ -34,7 +38,6 @@
                       </div>
             </div>
           </div>
-  
         </div>
     </div>
   
